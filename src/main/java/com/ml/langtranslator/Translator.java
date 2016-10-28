@@ -55,7 +55,7 @@ public class Translator {
 	 */
 	private static String translate(String s) {
 
-		TranslationResult translationResult = service.translate("hello", Language.ENGLISH, Language.SPANISH).execute();
+		TranslationResult translationResult = service.translate(s, Language.ENGLISH, Language.SPANISH).execute();
 		
 		if (translationResult.getFirstTranslation() != null) {
 			return translationResult.getFirstTranslation();
